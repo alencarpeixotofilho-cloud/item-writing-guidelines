@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "itemcheck"
+version = "0.1.0"
+description = "Heuristic detection of common multiple-choice item-writing flaws."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[project.scripts]
+itemcheck = "itemcheck.cli:main"
+
+[tool.setuptools]
+packages = ["itemcheck"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
